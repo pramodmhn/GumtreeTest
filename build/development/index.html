@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="appIpad">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script src="https://use.fontawesome.com/6b8e0fa9fe.js"></script>
+<title>Gumtree Australia1</title>
+</head>
+
+<body>
+
+<header class="header">
+</header>
+   		
+    <!--ng-controller-->
+<div class="container" ng-controller="ipadController">
+    <div class="item" ng-cloak>
+        
+        <div class="item-heading" ng-click="showDetails()">
+            {{ items.title }}
+            <span class="pull-right" ng-show="showDetail"><i class="fa fa-caret-up" aria-hidden="true"></i></span>
+            <span class="pull-right" ng-hide="showDetail"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+        </div>
+        
+        <div class="container-description" ng-show="showDetail">
+            <div class="item-description" ng-repeat="(key,item) in items.content" ng-show="$index == index">
+                <div class="item-body">
+                    <div class="left-col" ng-show="item.thumbnail"><img class="img-responsive" src="image/{{item.thumbnail}}"></div>
+                     <div class="right-col" ng-class="{'full-content-width' : !item.thumbnail}">
+                        <p ng-bind-html="item.description" ></p>
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="left-col-xs prev"  ng-click="itemPrev()">
+                        <a href="#" ng-hide="$index == 0"><i class="fa fa-caret-left fa-2x" aria-hidden="true"></i><span>Prev</span></a>
+                        &nbsp;
+                    </div>
+                    <div class="right-col-xs text-right" ng-click="itemNext()">
+                        <a href="#" ng-hide="$index == last">
+                            <span class="info">{{ items.content[$index+1].title }}</span>
+                            <span class="next"><i class="fa fa-caret-right fa-2x" aria-hidden="true"></i></span>
+                        </a>
+                    </div>
+                    <div class="clear-fix"></div>
+                </div><!--footer-->
+            </div><!--item description-->
+        </div><!--container-description-->
+        
+    </div><!--item-->
+</div><!--container-->
+
+<footer class="footer">
+        
+</footer>
+<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-resource.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-sanitize.min.js"></script>
+ 
+
+<script src="app/app.js"></script>
+<script src="app/service/itemService.js"></script>
+<script src="app/controllers/ipadController.js"></script>
+
+
+</body>
+</html>

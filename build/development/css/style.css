@@ -1,0 +1,164 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #18202d;
+  background-color: #f1f1f1;
+}
+
+.reset-margin {
+  margin: 0;
+}
+
+.reset-padding {
+  padding: 0;
+}
+
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 740px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.clear-fix {
+  clear: both;
+}
+
+.full-content-width {
+  width: 100% !important;
+}
+
+.item {
+  width: 100%;
+  display: table;
+  margin-bottom: 20px;
+  border: 1px solid #e6e7df;
+  border-radius: 4px;
+  border-left: none;
+  border-bottom-left-radius: 0;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.item .item-heading {
+  color: #050100;
+  font-weight: bold;
+  border-color: #d6e9c6;
+  padding: 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  /*gradient*/
+  background: #e7edc7;
+  background: -webkit-linear-gradient(left, #e7edc7, #c9c6a7);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #e7edc7, #c9c6a7);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #e7edc7, #c9c6a7);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #e7edc7, #c9c6a7);
+  /* Standard syntax (must be last) */
+  cursor: pointer;
+}
+
+.item .item-heading .fa {
+  color: #5a9217;
+}
+
+.item .item-body {
+  padding: 15px;
+  font-size: 14px;
+  overflow: hidden;
+  border-bottom: 1px solid #e6e7df;
+}
+
+.item .footer {
+  padding: 15px 20px;
+  font-size: 14px;
+}
+
+.item .footer a {
+  color: #5a9217;
+}
+
+.item .text-left {
+  text-align: left;
+}
+
+.item .text-right {
+  text-align: right;
+}
+
+.left-col {
+  float: left;
+  width: 40%;
+  padding-left: 20px;
+}
+
+.left-col-xs {
+  float: left;
+  width: 20%;
+  padding-left: 0px;
+}
+
+.right-col {
+  float: left;
+  width: 60%;
+  padding-left: 20px;
+}
+
+.right-col-xs {
+  float: left;
+  width: 80%;
+  padding-left: 20px;
+}
+
+.img-responsive {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.prev span {
+  padding-left: 10px;
+}
+
+.next {
+  padding-left: 10px;
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+  .item .footer {
+    padding: 15px 5px;
+  }
+  .left-col {
+    width: 100%;
+  }
+  .right-col {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .left-col-xs {
+    width: 100% !important;
+    text-align: left !important;
+    padding: 5px !important;
+  }
+  .right-col-xs {
+    width: 100% !important;
+    text-align: left !important;
+    padding: 5px !important;
+  }
+}
